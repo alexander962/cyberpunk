@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './Header.module.scss';
 
 const Header = () => {
-  return <div className={styles.title}>Header</div>;
+  return <header className={styles.title}>Header</header>;
 };
 
 export default Header;
