@@ -1,3 +1,8 @@
 .main {
-  color: red;
+  &Block {
+    position: relative;
+    z-index: 98;
+    color: red;
+    max-width: 100vw;
+  }
 }

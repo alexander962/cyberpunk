@@ -1,5 +1,22 @@
+'use client';
+
+import Hero from '@/components/Hero/Hero';
+import Info from '@/components/Info/Info';
+import StickyBlock from '@/components/StickyBlock/StickyBlock';
+
 import styles from './page.module.scss';
 
 export default function Home() {
-  return <main className={styles.main}>Hello!!!</main>;
+  return (
+    <main className={styles.main}>
+      <div className={styles.mainBlock}>
+        <StickyBlock zIndex={101}>
+          <Hero />
+        </StickyBlock>
+        <StickyBlock zIndex={102}>
+          <Info />
+        </StickyBlock>
+      </div>
+    </main>
+  );
 }
