@@ -1,7 +1,32 @@
-.title {
-  position: absolute;
-  left: 0;
+.header {
+  position: fixed;
+  left: 50%;
   top: 0;
+  transform: translateX(-50%);
   z-index: 101;
-  color: red;
+  width: 100%;
+  padding: 20px 36px;
+  @media screen and (max-width: 769px) {
+    padding: 20px 12px;
+  }
+
+  &Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 769px) {
+      flex-direction: column;
+    }
+
+    &Links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-left: 20px;
+      @media screen and (max-width: 769px) {
+        gap: 30px;
+      }
+    }
+  }
 }
