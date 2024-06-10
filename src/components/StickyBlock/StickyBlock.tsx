@@ -33,9 +33,6 @@ const StickyBlock = ({
     };
   }, []);
 
-  console.log(height);
-  console.log(windowHeight);
-
   return (
     <div
       ref={ref}
