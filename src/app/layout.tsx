@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
+import '../assets/fonts/Archangelsk/stylesheet.css';
 import './globals.scss';
 import Header from '@/components/layout/Header/Header';
 
