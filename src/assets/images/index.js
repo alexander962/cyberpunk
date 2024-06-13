@@ -1,6 +1,9 @@
 import heroImg1 from './hero-img1.png';
 import heroImg2 from './hero-img2.png';
 import heroImg3 from './hero-img3.png';
+import infoImg1 from './info-img1.png';
+import infoImg2 from './info-img2.png';
+import infoImg3 from './info-img3.png';
 import logoIcon from './logo-icon.svg';
 import instaIcon from './insta-icon.svg';
 import twitchIcon from './twitch-icon.svg';
@@ -20,4 +23,7 @@ export {
   facebookIcon,
   vkIcon,
   youtubeIcon,
+  infoImg1,
+  infoImg2,
+  infoImg3,
 };
