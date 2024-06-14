@@ -11,6 +11,7 @@ import twitterIcon from './twitter-icon.svg';
 import facebookIcon from './facebook-icon.svg';
 import vkIcon from './vk-icon.svg';
 import youtubeIcon from './youtube-icon.svg';
+import promoImg1 from './promo-img1.png';
 
 export {
   heroImg1,
@@ -26,4 +27,5 @@ export {
   infoImg1,
   infoImg2,
   infoImg3,
+  promoImg1,
 };

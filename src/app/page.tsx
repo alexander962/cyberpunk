@@ -3,6 +3,7 @@
 import Hero from '@/components/Hero/Hero';
 import Info from '@/components/Info/Info';
 import StickyBlock from '@/components/StickyBlock/StickyBlock';
+import Promotion from '@/components/Promotion/Promotion';
 
 import styles from './page.module.scss';
 
@@ -15,6 +16,9 @@ export default function Home() {
         </StickyBlock>
         <StickyBlock zIndex={102}>
           <Info />
+        </StickyBlock>
+        <StickyBlock zIndex={103}>
+          <Promotion />
         </StickyBlock>
       </div>
     </main>

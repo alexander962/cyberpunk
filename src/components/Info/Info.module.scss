@@ -8,20 +8,6 @@
     padding: 160px 12px 70px;
   }
 
-  &Title {
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 62px;
-    color: #000;
-    margin-bottom: 25px;
-    @media screen and (max-width: 769px) {
-      font-family: var(--second-family);
-      font-weight: 400;
-      font-size: 30px;
-      color: #000;
-    }
-  }
-
   &Text {
     font-family: var(--font-family);
     font-weight: 400;
@@ -29,6 +15,7 @@
     line-height: 189%;
     color: #777;
     margin-bottom: 70px;
+    max-width: 960px;
     @media screen and (max-width: 769px) {
       font-size: 16px;
     }
