@@ -1,15 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 import styles from '@/components/Promotion/Promotion.module.scss';
 import Wrapper from '@/components/Wrapper/Wrapper';
 import SectionTitle from '@/components/SectionTitle/SectionTitle';
 import SectionText from '@/components/SectionText/SectionText';
+import FormWrapper from '@/components/Forms/FormWrapper/FormWrapper';
+import FormField from '@/components/Forms/FormField/FormField';
+import FileUpload from '@/components/Forms/FileUpload/FileUpload';
+import SubmitButton from '@/components/Forms/SubmitButton/SubmitButton';
+import Checkbox from '@/components/Forms/CheckBox/CheckBox';
 
 import { promoImg1 } from '../../assets/images';
 
-const Promotion = () => {
+interface IFormInput {
+  name: string;
+  email: string;
+  screenshot: FileList;
+  consent: boolean;
+}
+
+const Promotion: React.FC = () => {
   const [isInitialAnimationComplete, setIsInitialAnimationComplete] = useState(false);
 
   useEffect(() => {
@@ -20,6 +33,16 @@ const Promotion = () => {
       }
     }
   }, [isInitialAnimationComplete]);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormInput>();
+
+  const onSubmit: SubmitHandler<IFormInput> = data => {
+    console.log('Form submitted', data);
+  };
 
   return (
     <section className={styles.promotion}>
@@ -42,6 +65,34 @@ const Promotion = () => {
           <span>Xbox Series X</span> или <span>Sony PlayStation 5!</span> Заполни форму ниже и
           приложи скриншот о покупке игры. Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)
         </SectionText>
+        <FormWrapper onSubmit={handleSubmit(onSubmit)}>
+          <FormField
+            placeholder="Как тебя зовут?"
+            type="text"
+            name="name"
+            register={register}
+            required
+            errors={errors}
+          />
+          <FormField
+            placeholder="Твой e-mail"
+            type="email"
+            name="email"
+            register={register}
+            required
+            errors={errors}
+          />
+          <FileUpload register={register} />
+          <SubmitButton text="Отправить" />
+          <Checkbox
+            id="consent"
+            name="consent"
+            label="Согласен на обработку персональных данных"
+            register={register}
+            required
+            errors={errors}
+          />
+        </FormWrapper>
       </Wrapper>
     </section>
   );

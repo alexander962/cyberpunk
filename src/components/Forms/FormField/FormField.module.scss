@@ -1,0 +1,31 @@
+.formField {
+  margin-bottom: 35px;
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+    background-color: transparent;
+    padding-bottom: 13px;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  .error {
+    margin-top: 10px;
+  }
+}
