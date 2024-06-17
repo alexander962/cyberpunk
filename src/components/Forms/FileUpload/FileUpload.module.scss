@@ -1,0 +1,42 @@
+.fileUpload {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border: 1px dashed #777;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 35px;
+
+  input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+  }
+
+  label {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+    background-color: #000;
+  }
+
+  label span {
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 5px;
+  }
+}
+
+.fileName {
+  font-size: 16px;
+  color: #fff;
+}

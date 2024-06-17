@@ -1,0 +1,16 @@
+.submitButton {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  background: #f8f200;
+  padding: 19px 50px;
+  margin-bottom: 15px;
+  transition: .3s ease;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    opacity: .8;
+  }
+}
